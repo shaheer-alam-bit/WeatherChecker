@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Weather from "./components/Weather";
+
+const styles = {
+  container: {
+    fontFamily: "Arial, sans-serif",
+    maxWidth: "800px",
+    margin: "auto",
+    padding: "20px",
+    backgroundColor: "#f8f9fa",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    borderRadius: "8px",
+    marginTop: "20px",
+  },
+  title: {
+    textAlign: "center",
+    marginBottom: "20px",
+    color: "#007bff",
+    fontSize: "36px",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Weather App</h1>
+      <Weather />      
     </div>
   );
 }
